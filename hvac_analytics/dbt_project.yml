@@ -1,0 +1,81 @@
+name: 'hvac_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'hvac_analytics'
+
+# These configurations specify where dbt should look for different types of files.
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+models:
+  hvac_analytics:
+    # Config indicated by + and applies to all files under models/example/
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  hvac_analytics:
+    customers:
+      +column_types:
+        customer_id: integer
+        customer_name: varchar(255)
+        address: varchar(500)
+        phone: varchar(50)
+        customer_type: varchar(20)
+        created_at: date
+    technicians:
+      +column_types:
+        technician_id: integer
+        technician_name: varchar(255)
+        skill_level: varchar(20)
+        hourly_rate: decimal(10,2)
+        hire_date: date
+    equipment_types:
+      +column_types:
+        equipment_id: integer
+        brand: varchar(100)
+        model: varchar(100)
+        equipment_type: varchar(50)
+        capacity_tons: decimal(4,2)
+        efficiency_rating: varchar(20)
+    parts:
+      +column_types:
+        part_id: integer
+        part_name: varchar(255)
+        part_category: varchar(100)
+        unit_cost: decimal(10,2)
+        supplier: varchar(255)
+    service_calls:
+      +column_types:
+        service_call_id: integer
+        customer_id: integer
+        technician_id: integer
+        equipment_id: integer
+        service_date: date
+        service_type: varchar(50)
+        duration_hours: decimal(4,2)
+        labor_cost: decimal(10,2)
+        parts_cost: decimal(10,2)
+        total_cost: decimal(10,2)
+    parts_usage:
+      +column_types:
+        usage_id: integer
+        service_call_id: integer
+        part_id: integer
+        quantity_used: integer
+        part_cost: decimal(10,2)
