@@ -121,7 +121,7 @@ def generate_installed_devices(customers_df, equipment_df, n_installations=800):
             'serial_number': fake.bothify('??##-####-####'),
             'installation_location': random.choice(['Main Floor', 'Basement', 'Attic', 'Garage', 'Roof']),
             'status': random.choice(statuses),
-            'last_maintenance_date': fake.date_between(start_date=install_date, end_date='today') if random.choice([True, False]) else None
+            'last_maintenance_date': fake.date_between(start_date=install_date, end_date=max(install_date, datetime.now().date())) if random.choice([True, False]) else None
         })
     
     return pd.DataFrame(installations)
@@ -237,7 +237,7 @@ def generate_vehicle_fleet(technicians_df, n_vehicles=20):
             'assigned_technician_id': random.choice(technicians_df['technician_id'].tolist()) if random.choice([True, False]) else None,
             'purchase_date': purchase_date,
             'current_mileage': mileage,
-            'last_maintenance_date': fake.date_between(start_date=purchase_date, end_date='today'),
+            'last_maintenance_date': fake.date_between(start_date=purchase_date, end_date=max(purchase_date, datetime.now().date())),
             'next_maintenance_mileage': mileage + random.randint(3000, 8000),
             'status': random.choice(statuses),
             'fuel_type': random.choice(['Gasoline', 'Diesel', 'Hybrid']),
@@ -406,7 +406,7 @@ def generate_payments(invoices_df):
         elif invoice['status'] == 'Pending' and random.choice([True, False]):
             # Partial payment
             partial_amount = round(invoice['total_amount'] * random.uniform(0.3, 0.8), 2)
-            payment_date = fake.date_between(start_date=invoice['issue_date'], end_date='today')
+            payment_date = fake.date_between(start_date=invoice['issue_date'], end_date=max(invoice['issue_date'], datetime.now().date()))
             payments.append({
                 'payment_id': payment_id,
                 'invoice_id': invoice['invoice_id'],
@@ -654,7 +654,7 @@ def generate_leads(n_leads=600):
             'urgency': random.choice(['Low', 'Medium', 'High']),
             'status': random.choice(lead_status),
             'created_date': created_date,
-            'last_contact_date': fake.date_between(start_date=created_date, end_date='today') if random.choice([True, False]) else None,
+            'last_contact_date': fake.date_between(start_date=created_date, end_date=max(created_date, datetime.now().date())) if random.choice([True, False]) else None,
             'assigned_to': f"Sales Rep {random.randint(1, 5)}",
             'notes': fake.text(max_nb_chars=200),
             'conversion_probability': random.randint(10, 90)
