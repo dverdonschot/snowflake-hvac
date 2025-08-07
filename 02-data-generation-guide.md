@@ -50,7 +50,7 @@ uv sync
 cd data_generation
 
 # Generate all training data (main command)
-python main.py
+python main.py --incremental
 ```
 
 ### Generation Script Details (`main.py`)
