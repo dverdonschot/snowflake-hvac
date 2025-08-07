@@ -663,73 +663,299 @@ def generate_leads(n_leads=600):
     return pd.DataFrame(leads)
 
 
-def save_to_csv(dataframes, output_dir='./'):
-    """Save all dataframes to CSV files."""
+def save_to_csv(dataframes, output_dir='../hvac_analytics/seeds/', incremental=False):
+    """Save all dataframes to CSV files with incremental support."""
+    import os
+    
+    print(f"DEBUG: incremental={incremental}")
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
     for name, df in dataframes.items():
         filename = f"{output_dir}{name}.csv"
-        df.to_csv(filename, index=False)
-        print(f"Saved {filename} with {len(df)} records")
+        file_exists = os.path.exists(filename)
+        
+        print(f"DEBUG: {name} - incremental={incremental}, file_exists={file_exists}")
+        
+        if incremental and file_exists:
+            # Append to existing file
+            df.to_csv(filename, mode='a', header=False, index=False)
+            print(f"Appended {len(df)} records to {filename}")
+        else:
+            # Create new file or overwrite
+            df.to_csv(filename, index=False)
+            action = "Overwritten" if file_exists else "Created"
+            print(f"{action} {filename} with {len(df)} records")
+
+
+def generate_incremental_data():
+    """Generate realistic incremental data for existing datasets."""
+    print("Generating incremental HVAC data...")
+    
+    # Read existing data to get current IDs
+    import os
+    import pandas as pd
+    
+    seeds_dir = '../hvac_analytics/seeds/'
+    
+    # Load existing data to determine next IDs
+    try:
+        existing_customers = pd.read_csv(f'{seeds_dir}customers.csv')
+        existing_technicians = pd.read_csv(f'{seeds_dir}technicians.csv') 
+        existing_equipment = pd.read_csv(f'{seeds_dir}equipment_types.csv')
+        existing_parts = pd.read_csv(f'{seeds_dir}parts.csv')
+        existing_service_calls = pd.read_csv(f'{seeds_dir}service_calls.csv')
+        
+        next_customer_id = existing_customers['customer_id'].max() + 1
+        next_technician_id = existing_technicians['technician_id'].max() + 1
+        next_equipment_id = existing_equipment['equipment_id'].max() + 1
+        next_part_id = existing_parts['part_id'].max() + 1
+        next_service_call_id = existing_service_calls['service_call_id'].max() + 1
+        
+    except FileNotFoundError:
+        print("No existing data found. Run full generation first.")
+        return
+    
+    # Generate small increments (realistic business growth)
+    new_customers = generate_customers_incremental(5, next_customer_id)  # 5 new customers
+    new_technicians = generate_technicians_incremental(2, next_technician_id)  # 2 new technicians  
+    new_equipment = generate_equipment_types_incremental(3, next_equipment_id)  # 3 new equipment types
+    new_parts = generate_parts_incremental(10, next_part_id)  # 10 new parts
+    
+    # More service calls (main business activity)
+    all_customers = pd.concat([existing_customers, new_customers])
+    all_technicians = pd.concat([existing_technicians, new_technicians])
+    all_equipment = pd.concat([existing_equipment, new_equipment])
+    
+    new_service_calls = generate_service_calls_incremental(200, next_service_call_id, 
+                                                          all_customers, all_technicians, all_equipment)
+    
+    # Generate related data
+    new_parts_usage = generate_parts_usage(new_service_calls, pd.concat([existing_parts, new_parts]))
+    new_invoices = generate_invoices(new_service_calls, all_customers)
+    new_payments = generate_payments(new_invoices)
+    new_appointments = generate_appointments(all_customers, all_technicians, new_service_calls, 50)
+    new_quotes = generate_quotes(all_customers, all_equipment, 30)
+    new_work_orders = generate_work_orders(new_service_calls, all_technicians)
+    new_customer_feedback = generate_customer_feedback(new_service_calls, all_customers, 100)
+    new_leads = generate_leads(50)
+    
+    # Package incremental data
+    incremental_datasets = {
+        'customers': new_customers,
+        'technicians': new_technicians,
+        'equipment_types': new_equipment,
+        'parts': new_parts,
+        'service_calls': new_service_calls,
+        'parts_usage': new_parts_usage,
+        'invoices': new_invoices,
+        'payments': new_payments,
+        'appointments': new_appointments,
+        'quotes': new_quotes,
+        'work_orders': new_work_orders,
+        'customer_feedback': new_customer_feedback,
+        'leads': new_leads
+    }
+    
+    save_to_csv(incremental_datasets, incremental=True)
+    
+    print(f"\nGenerated incremental HVAC data:")
+    total_records = 0
+    for name, df in incremental_datasets.items():
+        record_count = len(df)
+        total_records += record_count
+        print(f"- {name}: +{record_count} records")
+    
+    print(f"\nTotal new records: {total_records}")
+
+
+def generate_customers_incremental(n_customers, start_id):
+    """Generate incremental customer data."""
+    fake = Faker()
+    customers = []
+    
+    for i in range(n_customers):
+        customers.append({
+            'customer_id': start_id + i,
+            'customer_name': fake.company() if random.choice([True, False]) else fake.name(),
+            'address': fake.address().replace('\n', ', '),
+            'phone': fake.phone_number(),
+            'customer_type': random.choice(['residential', 'commercial']),
+            'created_at': fake.date_between(start_date='-30d', end_date='today')
+        })
+    
+    return pd.DataFrame(customers)
+
+
+def generate_technicians_incremental(n_technicians, start_id):
+    """Generate incremental technician data."""
+    fake = Faker()
+    technicians = []
+    
+    levels = ['junior', 'senior', 'lead', 'specialist']
+    skills = ['HVAC_Installation', 'Electrical', 'Refrigeration', 'Ductwork', 
+              'Diagnostics', 'Customer_Service', 'Safety_Protocols']
+    
+    for i in range(n_technicians):
+        level = random.choice(levels)
+        base_skill = {'junior': 3, 'senior': 6, 'lead': 8, 'specialist': 9}[level]
+        
+        technician_skills = {}
+        for skill in skills:
+            skill_variance = random.randint(-2, 2)
+            skill_level = max(1, min(10, base_skill + skill_variance))
+            technician_skills[f'{skill.lower()}_skill'] = skill_level
+        
+        technician = {
+            'technician_id': start_id + i,
+            'technician_name': fake.name(),
+            'phone': fake.phone_number(),
+            'technician_level': level,
+            'hourly_rate': random.randint(25, 75),
+            'hire_date': fake.date_between(start_date='-90d', end_date='today'),
+            'years_experience': random.randint(1, 20),
+            'certification_level': random.choice(['Basic', 'Intermediate', 'Advanced', 'Master'])
+        }
+        technician.update(technician_skills)
+        technicians.append(technician)
+    
+    return pd.DataFrame(technicians)
+
+
+def generate_equipment_types_incremental(n_equipment, start_id):
+    """Generate incremental equipment type data."""
+    equipment = []
+    
+    brands = ['Carrier', 'Trane', 'Lennox', 'Rheem', 'Goodman', 'York', 'Daikin']
+    types = ['Central AC', 'Heat Pump', 'Furnace', 'Ductless Mini-Split', 'Package Unit']
+    
+    for i in range(n_equipment):
+        equipment.append({
+            'equipment_id': start_id + i,
+            'brand': random.choice(brands),
+            'model': f"{random.choice(['X', 'Pro', 'Elite', 'Prime'])}{random.randint(100, 999)}",
+            'equipment_type': random.choice(types),
+            'btu_rating': random.choice([18000, 24000, 36000, 48000, 60000]),
+            'energy_rating': round(random.uniform(13, 20), 1)
+        })
+    
+    return pd.DataFrame(equipment)
+
+
+def generate_parts_incremental(n_parts, start_id):
+    """Generate incremental parts data."""
+    fake = Faker()
+    parts = []
+    
+    part_types = ['Filter', 'Compressor', 'Coil', 'Fan Motor', 'Thermostat', 
+                  'Capacitor', 'Contactor', 'Refrigerant', 'Ductwork', 'Valve']
+    
+    for i in range(n_parts):
+        parts.append({
+            'part_id': start_id + i,
+            'part_name': f"{random.choice(part_types)} - {fake.word().title()}",
+            'part_category': random.choice(part_types),
+            'unit_cost': round(random.uniform(5, 500), 2),
+            'supplier': fake.company()
+        })
+    
+    return pd.DataFrame(parts)
+
+
+def generate_service_calls_incremental(n_calls, start_id, customers_df, technicians_df, equipment_df):
+    """Generate incremental service call data."""
+    fake = Faker()
+    service_calls = []
+    
+    service_types = ['Maintenance', 'Repair', 'Installation', 'Emergency', 'Inspection']
+    
+    for i in range(n_calls):
+        service_date = fake.date_between(start_date='-30d', end_date='today')
+        duration = round(random.uniform(1, 8), 1)
+        
+        service_calls.append({
+            'service_call_id': start_id + i,
+            'customer_id': random.choice(customers_df['customer_id'].tolist()),
+            'technician_id': random.choice(technicians_df['technician_id'].tolist()),
+            'equipment_id': random.choice(equipment_df['equipment_id'].tolist()),
+            'service_date': service_date,
+            'service_type': random.choice(service_types),
+            'duration_hours': duration,
+            'labor_cost': round(duration * random.randint(50, 100), 2),
+            'parts_cost': round(random.uniform(0, 300), 2),
+            'total_cost': 0
+        })
+    
+    df = pd.DataFrame(service_calls)
+    df['total_cost'] = df['labor_cost'] + df['parts_cost']
+    return df
 
 
 def main():
-    print("Generating comprehensive HVAC company training data...")
+    import sys
     
-    # Generate all datasets according to specifications
-    customers = generate_customers(500)
-    technicians = generate_technicians(15)
-    equipment = generate_equipment_types(50)
-    parts = generate_parts(200)
-    installed_devices = generate_installed_devices(customers, equipment, 800)
-    service_calls = generate_service_calls(customers, technicians, equipment, 2000)
-    parts_usage = generate_parts_usage(service_calls, parts)
-    incident_response = generate_incident_response(service_calls, technicians, 150)
-    vehicle_fleet = generate_vehicle_fleet(technicians, 20)
-    mailing_list = generate_mailing_list(customers, 300)
-    subscriptions = generate_subscriptions(customers, 250)
-    
-    # Generate business operations data
-    invoices = generate_invoices(service_calls, customers)
-    payments = generate_payments(invoices)
-    inventory = generate_inventory(parts)
-    appointments = generate_appointments(customers, technicians, service_calls, 500)
-    quotes = generate_quotes(customers, equipment, 400)
-    work_orders = generate_work_orders(service_calls, technicians)
-    customer_feedback = generate_customer_feedback(service_calls, customers, 800)
-    leads = generate_leads(600)
-    
-    # Save to CSV files
-    datasets = {
-        'customers': customers,
-        'technicians': technicians,
-        'equipment_types': equipment,
-        'parts': parts,
-        'installed_devices': installed_devices,
-        'service_calls': service_calls,
-        'parts_usage': parts_usage,
-        'incident_response': incident_response,
-        'vehicle_fleet': vehicle_fleet,
-        'mailing_list': mailing_list,
-        'subscriptions': subscriptions,
-        'invoices': invoices,
-        'payments': payments,
-        'inventory': inventory,
-        'appointments': appointments,
-        'quotes': quotes,
-        'work_orders': work_orders,
-        'customer_feedback': customer_feedback,
-        'leads': leads
-    }
-    
-    save_to_csv(datasets)
-    
-    print(f"\nGenerated comprehensive HVAC training data:")
-    total_records = 0
-    for name, df in datasets.items():
-        record_count = len(df)
-        total_records += record_count
-        print(f"- {name}: {record_count} records")
-    
-    print(f"\nTotal: {total_records} records across {len(datasets)} tables")
+    if len(sys.argv) > 1 and sys.argv[1] == '--incremental':
+        generate_incremental_data()
+    else:
+        print("Generating comprehensive HVAC company training data...")
+        
+        # Generate all datasets according to specifications
+        customers = generate_customers(500)
+        technicians = generate_technicians(15)
+        equipment = generate_equipment_types(50)
+        parts = generate_parts(200)
+        installed_devices = generate_installed_devices(customers, equipment, 800)
+        service_calls = generate_service_calls(customers, technicians, equipment, 2000)
+        parts_usage = generate_parts_usage(service_calls, parts)
+        incident_response = generate_incident_response(service_calls, technicians, 150)
+        vehicle_fleet = generate_vehicle_fleet(technicians, 20)
+        mailing_list = generate_mailing_list(customers, 300)
+        subscriptions = generate_subscriptions(customers, 250)
+        
+        # Generate business operations data
+        invoices = generate_invoices(service_calls, customers)
+        payments = generate_payments(invoices)
+        inventory = generate_inventory(parts)
+        appointments = generate_appointments(customers, technicians, service_calls, 500)
+        quotes = generate_quotes(customers, equipment, 400)
+        work_orders = generate_work_orders(service_calls, technicians)
+        customer_feedback = generate_customer_feedback(service_calls, customers, 800)
+        leads = generate_leads(600)
+        
+        # Save to CSV files
+        datasets = {
+            'customers': customers,
+            'technicians': technicians,
+            'equipment_types': equipment,
+            'parts': parts,
+            'installed_devices': installed_devices,
+            'service_calls': service_calls,
+            'parts_usage': parts_usage,
+            'incident_response': incident_response,
+            'vehicle_fleet': vehicle_fleet,
+            'mailing_list': mailing_list,
+            'subscriptions': subscriptions,
+            'invoices': invoices,
+            'payments': payments,
+            'inventory': inventory,
+            'appointments': appointments,
+            'quotes': quotes,
+            'work_orders': work_orders,
+            'customer_feedback': customer_feedback,
+            'leads': leads
+        }
+        
+        save_to_csv(datasets)
+        
+        print(f"\nGenerated comprehensive HVAC training data:")
+        total_records = 0
+        for name, df in datasets.items():
+            record_count = len(df)
+            total_records += record_count
+            print(f"- {name}: {record_count} records")
+        
+        print(f"\nTotal: {total_records} records across {len(datasets)} tables")
 
 
 if __name__ == "__main__":

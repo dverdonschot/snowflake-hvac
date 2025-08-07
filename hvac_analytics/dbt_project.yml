@@ -61,8 +61,8 @@ seeds:
         brand: varchar(100)
         model: varchar(100)
         equipment_type: varchar(50)
-        capacity_tons: decimal(4,2)
-        efficiency_rating: varchar(20)
+        btu_rating: integer
+        energy_rating: decimal(4,2)
     parts:
       +column_types:
         part_id: integer
