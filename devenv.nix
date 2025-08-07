@@ -8,7 +8,6 @@
   packages = [ 
     pkgs.git 
     pkgs.uv
-    pkgs.nodejs_22
   ];
 
   # https://devenv.sh/languages/
@@ -31,17 +30,6 @@
     echo hello from $GREET
   '';
 
-  env = {
-    NPM_CONFIG_PREFIX = "/home/ewt/.npm-global";
-    PATH = "/home/ewt/.npm-global/bin:$PATH"; 
-  };
-
-
-  enterShell = ''
-    mkdir -p /home/ewt/.npm-global/bin
-    export PATH="/home/ewt/.npm-global/bin:$PATH"
-    npm install -g @anthropic-ai/claude-code
-  '';
 
   # https://devenv.sh/tasks/
   # tasks = {

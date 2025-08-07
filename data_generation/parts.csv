@@ -1,201 +1,201 @@
 part_id,part_name,part_category,unit_cost,supplier
-1,Thermostat - Difference,Capacitor,120.41,Delacruz-Flowers
-2,Contactor - Military,Compressor,150.19,"Branch, Morris and Howard"
-3,Thermostat - Follow,Refrigerant,35.03,King Inc
-4,Thermostat - Billion,Thermostat,431.55,Johnson Ltd
-5,Filter - Art,Fan Motor,341.79,Warren Group
-6,Filter - School,Fan Motor,312.52,Morrison LLC
-7,Valve - Above,Refrigerant,165.77,Roman LLC
-8,Thermostat - Middle,Compressor,139.01,Miller-Odonnell
-9,Thermostat - Moment,Thermostat,223.87,Brewer Group
-10,Refrigerant - Add,Contactor,429.84,Williams PLC
-11,Contactor - Build,Refrigerant,66.28,"Turner, Bishop and Taylor"
-12,Coil - Appear,Fan Motor,116.96,Anderson Group
-13,Valve - Animal,Thermostat,204.31,Johnson PLC
-14,Ductwork - One,Filter,61.75,Bennett-Hill
-15,Compressor - Today,Compressor,12.11,Stewart-Pierce
-16,Compressor - Pattern,Compressor,439.3,Parker-Johnson
-17,Capacitor - Natural,Filter,255.79,Carroll-Glenn
-18,Capacitor - Letter,Valve,75.06,"Lopez, Acosta and Anderson"
-19,Thermostat - Since,Refrigerant,216.55,Larsen PLC
-20,Ductwork - Beautiful,Thermostat,118.32,Garner-Cook
-21,Fan Motor - Or,Filter,47.69,"Wilson, Gomez and Fisher"
-22,Ductwork - Perhaps,Contactor,124.82,"Garrett, Mcdonald and Diaz"
-23,Contactor - This,Filter,365.04,Perry-Sanchez
-24,Refrigerant - Pattern,Coil,21.76,Herman-Foster
-25,Refrigerant - Window,Ductwork,176.55,"Spence, Wilson and Macdonald"
-26,Valve - Ago,Valve,463.67,Garza-Medina
-27,Contactor - Style,Fan Motor,492.47,Torres Inc
-28,Thermostat - Behavior,Thermostat,357.51,"Brooks, Burns and Diaz"
-29,Capacitor - Garden,Ductwork,342.33,Massey-Rodriguez
-30,Contactor - Story,Capacitor,33.57,Morrison-Stout
-31,Coil - Fly,Refrigerant,195.31,"Stokes, Barton and Kaufman"
-32,Valve - Get,Filter,440.13,Cruz Ltd
-33,Capacitor - Customer,Capacitor,435.48,Miller Inc
-34,Filter - Price,Ductwork,385.63,Aguilar Ltd
-35,Refrigerant - Red,Contactor,184.92,Arellano Inc
-36,Refrigerant - Scene,Valve,327.48,Allison LLC
-37,Refrigerant - Also,Capacitor,193.5,Reese-Robinson
-38,Valve - Discuss,Filter,318.35,"Vargas, Mitchell and Johnson"
-39,Ductwork - Example,Ductwork,76.54,Little-Davis
-40,Capacitor - Itself,Refrigerant,226.1,Cannon-Cordova
-41,Refrigerant - Need,Thermostat,48.8,Burton LLC
-42,Thermostat - Down,Capacitor,371.27,Carey and Sons
-43,Fan Motor - May,Refrigerant,302.01,"Hunter, Rogers and Ramirez"
-44,Fan Motor - Write,Compressor,432.38,"Carroll, Parker and Johnson"
-45,Filter - Worker,Valve,414.23,Garcia-Garcia
-46,Coil - Raise,Filter,131.39,"Terry, Vargas and Johnson"
-47,Fan Motor - Smile,Capacitor,427.56,Wilson Group
-48,Fan Motor - Everybody,Fan Motor,146.43,"Curtis, Anderson and Mcdonald"
-49,Ductwork - Term,Compressor,313.76,Foley-Johnson
-50,Ductwork - Interest,Thermostat,293.58,Simmons PLC
-51,Fan Motor - Identify,Refrigerant,475.12,"Bryant, Livingston and Beasley"
-52,Compressor - Property,Fan Motor,16.3,"Baker, Ray and Davis"
-53,Valve - Sign,Thermostat,161.56,Robinson Ltd
-54,Compressor - Movie,Contactor,451.93,Lucas-Clark
-55,Filter - Country,Capacitor,364.18,"Whitaker, Medina and Johnson"
-56,Valve - Fine,Coil,133.78,Meyer LLC
-57,Fan Motor - Something,Valve,110.27,"Young, Hernandez and Schneider"
-58,Coil - Ahead,Refrigerant,106.07,Cox Ltd
-59,Filter - Time,Contactor,484.41,"Ritter, Edwards and Manning"
-60,Refrigerant - None,Compressor,169.2,Santiago Ltd
-61,Thermostat - Wife,Thermostat,461.94,"Davies, Wood and Miller"
-62,Valve - Sometimes,Thermostat,128.53,Ewing-Hogan
-63,Thermostat - Talk,Ductwork,167.23,"Arnold, Olsen and Sullivan"
-64,Refrigerant - Market,Compressor,207.7,Bryant LLC
-65,Capacitor - Gun,Coil,80.51,Young LLC
-66,Fan Motor - Might,Capacitor,167.09,Reyes PLC
-67,Capacitor - Right,Compressor,293.1,Drake-Dalton
-68,Ductwork - Happy,Compressor,166.14,"Watts, Thompson and Pierce"
-69,Fan Motor - Order,Thermostat,99.94,Wilson-Medina
-70,Coil - Report,Valve,130.56,"Howell, Bennett and Hernandez"
-71,Fan Motor - Season,Compressor,356.41,"Cole, Massey and Morgan"
-72,Valve - Couple,Coil,480.11,"Garcia, Ramirez and Dixon"
-73,Ductwork - Wonder,Ductwork,499.94,"Cruz, Bowman and Johnson"
-74,Ductwork - Spend,Contactor,79.41,Warner Group
-75,Valve - Dream,Thermostat,175.97,Cortez-Cain
-76,Coil - Line,Fan Motor,61.89,Manning and Sons
-77,Ductwork - Thus,Fan Motor,10.93,Ramos LLC
-78,Thermostat - Seek,Compressor,233.18,Armstrong Group
-79,Coil - Piece,Coil,409.98,Colon Group
-80,Refrigerant - Relationship,Contactor,491.83,Johnson PLC
-81,Contactor - His,Ductwork,449.53,"Webb, Collins and Mosley"
-82,Valve - Would,Capacitor,144.39,"West, Price and Jennings"
-83,Thermostat - Out,Refrigerant,380.95,"Hayes, Flores and Mendez"
-84,Fan Motor - Person,Contactor,487.54,"Salazar, Walker and Moore"
-85,Compressor - Some,Compressor,450.98,Adams-Valencia
-86,Thermostat - Phone,Fan Motor,339.54,Hanna and Sons
-87,Capacitor - Best,Compressor,300.77,Torres PLC
-88,Compressor - Painting,Thermostat,352.48,Caldwell PLC
-89,Compressor - Dinner,Valve,149.57,"Garcia, Bowman and Torres"
-90,Valve - Interesting,Fan Motor,281.21,"Ramirez, Pratt and Clark"
-91,Refrigerant - Because,Valve,189.66,Garcia-Gutierrez
-92,Thermostat - Conference,Coil,8.24,Jones-Parker
-93,Filter - Information,Coil,290.35,Mendoza Inc
-94,Thermostat - Note,Filter,454.81,Simmons LLC
-95,Filter - Career,Capacitor,111.18,"Moreno, Walker and Gonzalez"
-96,Coil - Sense,Refrigerant,327.29,"Hale, Rivera and Scott"
-97,Valve - Know,Fan Motor,290.31,Spencer-Henderson
-98,Compressor - Area,Thermostat,192.97,Hess-Fowler
-99,Fan Motor - Word,Thermostat,291.67,Garcia LLC
-100,Capacitor - Learn,Compressor,265.14,Wright LLC
-101,Capacitor - Him,Contactor,407.34,"Mccall, Hensley and Cunningham"
-102,Valve - Few,Fan Motor,164.48,Vargas-Owens
-103,Contactor - Person,Valve,193.7,Shepherd-Horn
-104,Contactor - Middle,Ductwork,97.33,Brown and Sons
-105,Compressor - Represent,Fan Motor,110.91,Ramirez Group
-106,Valve - Fill,Coil,14.0,Werner LLC
-107,Capacitor - Job,Filter,235.83,Hicks Group
-108,Fan Motor - Fall,Fan Motor,498.03,Sawyer-Nelson
-109,Valve - Civil,Fan Motor,21.62,"Davenport, Berry and Parker"
-110,Thermostat - Bar,Compressor,189.61,Macias-Gibson
-111,Fan Motor - Education,Thermostat,199.76,"Wallace, Perez and Jennings"
-112,Contactor - Plant,Compressor,343.96,"Taylor, Gentry and Johnson"
-113,Compressor - Civil,Ductwork,431.96,Gomez-Jones
-114,Capacitor - Offer,Refrigerant,178.43,Perez-Johnson
-115,Valve - Appear,Contactor,45.87,Davidson and Sons
-116,Valve - Study,Thermostat,314.96,Lloyd-Brown
-117,Thermostat - Lose,Thermostat,244.45,Evans Group
-118,Fan Motor - Total,Fan Motor,226.05,Burns-Thompson
-119,Capacitor - Onto,Capacitor,377.01,Lewis-Melendez
-120,Refrigerant - Husband,Thermostat,233.41,Ruiz LLC
-121,Compressor - Suffer,Contactor,117.06,"Young, Long and Mitchell"
-122,Contactor - Perform,Thermostat,296.5,Monroe Inc
-123,Filter - Whether,Coil,68.76,Russell LLC
-124,Capacitor - Else,Contactor,327.39,Gray-Munoz
-125,Capacitor - Learn,Compressor,109.04,Wong-Clayton
-126,Compressor - Happen,Ductwork,222.68,Maynard-Benjamin
-127,Ductwork - Activity,Thermostat,468.83,"Smith, Avila and Berry"
-128,Thermostat - Career,Refrigerant,424.72,"Wallace, Dillon and Rogers"
-129,Ductwork - Build,Thermostat,107.83,Jackson Ltd
-130,Refrigerant - Real,Capacitor,159.39,"Medina, Edwards and Jones"
-131,Thermostat - Anything,Coil,47.11,"Campos, King and Franklin"
-132,Contactor - Six,Ductwork,83.76,Clayton-Anderson
-133,Thermostat - Trip,Coil,424.53,Austin-May
-134,Capacitor - Until,Coil,185.97,"Smith, Sawyer and Jackson"
-135,Contactor - Affect,Capacitor,413.69,"Cardenas, Turner and Simpson"
-136,Filter - Return,Capacitor,286.48,"Johns, Goodwin and Lee"
-137,Filter - Face,Fan Motor,407.96,Mendez Group
-138,Ductwork - Service,Fan Motor,297.53,Lucero-Oconnor
-139,Filter - Mrs,Filter,138.57,"Salas, Lopez and Walker"
-140,Ductwork - Although,Capacitor,296.18,Holland LLC
-141,Thermostat - Do,Ductwork,207.89,Nguyen-White
-142,Capacitor - Bad,Refrigerant,251.17,"Maldonado, Lloyd and Hancock"
-143,Contactor - Audience,Refrigerant,13.8,"Benson, Scott and Lewis"
-144,Capacitor - Many,Thermostat,432.43,"Warren, Robinson and Ward"
-145,Ductwork - Quite,Valve,107.81,Maxwell Inc
-146,Refrigerant - Guess,Ductwork,454.31,"Wyatt, Benitez and Huang"
-147,Valve - Final,Compressor,197.18,Orozco-Ross
-148,Contactor - Do,Valve,185.21,"Johnson, Thomas and Gray"
-149,Ductwork - Condition,Thermostat,127.65,"Ortiz, Baker and Mitchell"
-150,Ductwork - Production,Contactor,228.28,"Ford, Fowler and Stone"
-151,Compressor - Interest,Coil,279.3,Adams and Sons
-152,Thermostat - Bank,Valve,120.31,"Nelson, Reeves and Gutierrez"
-153,Fan Motor - Leg,Refrigerant,278.43,"Frazier, Carter and Gonzales"
-154,Valve - Candidate,Filter,9.37,Hess-Johnson
-155,Filter - Election,Filter,75.71,"Johnson, Jones and Miller"
-156,Filter - Only,Coil,294.98,"Ward, Elliott and Cox"
-157,Ductwork - She,Thermostat,247.14,Jones-Peterson
-158,Valve - Plan,Filter,34.7,"Petersen, Johnson and Davis"
-159,Coil - Mean,Fan Motor,412.2,Frazier-Blackwell
-160,Filter - Arm,Compressor,192.14,Mejia-Davis
-161,Compressor - Ago,Fan Motor,310.42,"Scott, Burgess and Jenkins"
-162,Refrigerant - Why,Capacitor,391.42,"King, Smith and Guzman"
-163,Valve - Collection,Thermostat,306.17,Gray LLC
-164,Capacitor - Fight,Valve,480.86,"Jordan, Rodriguez and Smith"
-165,Valve - Carry,Thermostat,116.77,King-Washington
-166,Thermostat - Down,Compressor,85.62,Taylor PLC
-167,Coil - Than,Coil,239.39,Smith-Wilson
-168,Capacitor - Land,Filter,299.01,"Thompson, Johnson and Clark"
-169,Refrigerant - Way,Contactor,476.5,Blair-Hunt
-170,Ductwork - Claim,Thermostat,155.41,Harding-Middleton
-171,Compressor - Mean,Contactor,233.32,Little Inc
-172,Thermostat - Collection,Capacitor,499.89,Lewis PLC
-173,Coil - I,Coil,347.23,Blankenship Inc
-174,Contactor - First,Valve,333.5,Oneill-Anderson
-175,Compressor - Present,Capacitor,182.88,Ramirez-Parsons
-176,Coil - Enough,Ductwork,22.66,"Sampson, Chan and Cordova"
-177,Ductwork - Item,Refrigerant,299.26,Gutierrez Group
-178,Filter - Too,Compressor,31.69,Mills-Branch
-179,Valve - Police,Capacitor,131.15,Hutchinson-Schneider
-180,Valve - Family,Refrigerant,54.84,"Neal, Oliver and Taylor"
-181,Refrigerant - Significant,Coil,81.15,"Taylor, Humphrey and Thomas"
-182,Capacitor - Face,Compressor,302.17,Torres-Williams
-183,Refrigerant - Build,Refrigerant,115.95,Ramos-Bowen
-184,Valve - Believe,Contactor,138.87,Lawrence-Russell
-185,Valve - Receive,Thermostat,192.27,"Smith, Benton and Goodwin"
-186,Coil - Reduce,Fan Motor,257.71,"Mccann, Thompson and Hood"
-187,Ductwork - Whole,Capacitor,41.46,Walker-Chapman
-188,Capacitor - Seek,Ductwork,375.76,Jackson-Dodson
-189,Capacitor - Continue,Fan Motor,262.32,"Cook, Williams and Robinson"
-190,Filter - Boy,Coil,289.46,"Ochoa, Harmon and Mitchell"
-191,Coil - Rule,Thermostat,78.4,"Hill, Soto and Bennett"
-192,Thermostat - Move,Fan Motor,179.08,Woods PLC
-193,Valve - Full,Thermostat,405.01,"Reed, Macias and Walker"
-194,Filter - Drive,Contactor,466.79,"Martin, Reyes and Shields"
-195,Filter - Mind,Refrigerant,411.4,"Jimenez, Ruiz and Garrett"
-196,Thermostat - Our,Fan Motor,402.74,Mayo Ltd
-197,Compressor - Boy,Fan Motor,258.49,"Johnson, Sullivan and Howard"
-198,Compressor - Whom,Contactor,362.78,Hamilton Ltd
-199,Ductwork - Final,Ductwork,224.3,"Horton, Berg and Jordan"
-200,Fan Motor - Court,Fan Motor,420.33,Wilson-Roach
+1,Refrigerant - Man,Coil,51.44,"Phelps, Jones and Anderson"
+2,Thermostat - Arrive,Compressor,46.29,Holloway Ltd
+3,Refrigerant - Gas,Compressor,12.97,Thomas Group
+4,Ductwork - Family,Ductwork,246.21,"Edwards, Ruiz and Smith"
+5,Ductwork - Cultural,Compressor,354.56,Grant Ltd
+6,Fan Motor - Social,Thermostat,26.66,"Kaiser, Day and Whitaker"
+7,Filter - Specific,Valve,162.97,"Martin, Obrien and Kelly"
+8,Ductwork - List,Ductwork,289.97,"Olsen, Walker and Decker"
+9,Compressor - Least,Ductwork,464.1,Wilkinson-Newman
+10,Contactor - Name,Capacitor,384.03,Taylor Ltd
+11,Refrigerant - Image,Valve,50.23,"Copeland, Jones and Robinson"
+12,Capacitor - Wall,Thermostat,114.89,Ward Ltd
+13,Thermostat - Hour,Filter,237.93,Davis-Smith
+14,Filter - Let,Thermostat,134.97,Castaneda PLC
+15,Filter - Plan,Refrigerant,423.26,Cobb and Sons
+16,Thermostat - Community,Compressor,430.85,"Brown, Richards and Gonzales"
+17,Refrigerant - Trade,Valve,296.59,Carter-Horne
+18,Fan Motor - However,Valve,281.57,Lee-Johnson
+19,Refrigerant - How,Thermostat,391.39,Chandler Group
+20,Thermostat - Nature,Thermostat,163.75,Brown-Reese
+21,Contactor - Case,Refrigerant,412.0,"Adams, Gordon and Anderson"
+22,Filter - Form,Fan Motor,246.76,Nelson Group
+23,Refrigerant - Approach,Thermostat,441.51,"Jones, Ward and Klein"
+24,Refrigerant - Reality,Ductwork,318.25,"Montgomery, Pace and Roberts"
+25,Filter - Affect,Thermostat,311.19,Ramirez LLC
+26,Valve - How,Compressor,432.62,"Hayden, Wang and Sawyer"
+27,Compressor - Over,Coil,233.13,"Mason, Harris and Everett"
+28,Compressor - Great,Compressor,495.94,Palmer Inc
+29,Ductwork - Second,Contactor,193.49,Martinez-Terrell
+30,Fan Motor - Discover,Thermostat,418.5,Gray-Brooks
+31,Valve - Subject,Coil,41.82,"Sutton, Carr and Zimmerman"
+32,Contactor - Bed,Valve,105.6,Brown Group
+33,Thermostat - Guy,Filter,344.76,Bauer LLC
+34,Refrigerant - Beautiful,Thermostat,423.98,Decker Inc
+35,Filter - Check,Thermostat,364.82,Hunt-Hoffman
+36,Filter - Adult,Valve,338.8,Potts-Simmons
+37,Refrigerant - Seat,Compressor,191.16,"King, Thompson and Coleman"
+38,Coil - Black,Refrigerant,351.26,Savage-Owens
+39,Filter - Sing,Thermostat,438.49,"Gibson, Carpenter and Simon"
+40,Coil - May,Coil,153.53,Bridges-Nielsen
+41,Ductwork - Door,Ductwork,469.87,Drake-Gross
+42,Capacitor - Program,Compressor,249.08,Black-Glenn
+43,Compressor - Impact,Compressor,478.19,Mitchell Inc
+44,Ductwork - Arm,Thermostat,56.96,Compton Ltd
+45,Filter - Will,Coil,10.11,Garza PLC
+46,Filter - Decision,Filter,7.83,Smith PLC
+47,Filter - Oil,Fan Motor,288.29,"Brown, Calhoun and Howell"
+48,Thermostat - Laugh,Compressor,286.22,"Barnes, Long and Clark"
+49,Coil - Particularly,Capacitor,335.48,"Dixon, Vasquez and Dickerson"
+50,Contactor - Tv,Ductwork,191.66,Gilbert-Perez
+51,Ductwork - Kind,Compressor,457.07,Newton-Young
+52,Fan Motor - Price,Capacitor,480.82,"Nguyen, Fields and Harper"
+53,Contactor - Commercial,Refrigerant,270.28,Gibson-Johnson
+54,Capacitor - For,Compressor,334.41,Guzman-Ramirez
+55,Valve - Too,Thermostat,366.95,"Waller, Robinson and Daniels"
+56,Capacitor - Including,Coil,79.66,"Lowe, Johnson and Mack"
+57,Compressor - Factor,Filter,277.87,Ball-Brown
+58,Valve - Community,Capacitor,345.68,"Holden, Roberts and Cox"
+59,Ductwork - Everyone,Filter,417.76,Jackson-Smith
+60,Compressor - Notice,Capacitor,319.27,Bennett LLC
+61,Compressor - Sometimes,Thermostat,134.84,Nichols-Weeks
+62,Filter - Up,Ductwork,132.08,"Kennedy, Morrison and Moore"
+63,Coil - Adult,Compressor,281.09,"Bonilla, Marks and Pace"
+64,Ductwork - Two,Contactor,320.65,Rodriguez LLC
+65,Thermostat - Stage,Valve,217.44,Bond PLC
+66,Contactor - Determine,Filter,254.63,"Murphy, Campbell and Pham"
+67,Ductwork - Herself,Fan Motor,246.55,"Thompson, Gray and Montgomery"
+68,Ductwork - Offer,Fan Motor,34.33,Grant-Beasley
+69,Filter - Board,Filter,449.17,"Robinson, Hall and Fernandez"
+70,Coil - More,Compressor,415.26,Sullivan LLC
+71,Contactor - Position,Contactor,472.37,Hernandez-Wang
+72,Contactor - Cause,Contactor,479.23,Stanley-Clark
+73,Refrigerant - Same,Refrigerant,248.88,Lane PLC
+74,Valve - Then,Filter,102.38,"Barber, Jordan and Davis"
+75,Capacitor - Away,Capacitor,471.22,"Pratt, Cannon and Holder"
+76,Filter - Office,Ductwork,243.81,Carter LLC
+77,Coil - Painting,Refrigerant,139.12,Martin Group
+78,Contactor - Gun,Contactor,182.48,Garrett-Foster
+79,Contactor - Ever,Fan Motor,296.03,Bailey-Johnson
+80,Ductwork - State,Coil,167.02,"Snyder, Williams and Jones"
+81,Thermostat - Choose,Contactor,280.7,Parrish Inc
+82,Valve - Soon,Thermostat,431.14,Scott Inc
+83,Fan Motor - Customer,Thermostat,444.68,Jordan and Sons
+84,Ductwork - Far,Compressor,187.74,Ruiz and Sons
+85,Fan Motor - Until,Refrigerant,359.67,"Singh, Brown and Cuevas"
+86,Ductwork - Hand,Valve,356.79,Brown-Clark
+87,Coil - Wait,Valve,451.69,Stevens and Sons
+88,Compressor - Protect,Refrigerant,199.92,Lewis Group
+89,Ductwork - He,Capacitor,72.46,"Butler, Sullivan and Glass"
+90,Filter - Management,Thermostat,34.04,"Phelps, Barker and Gonzalez"
+91,Thermostat - Claim,Ductwork,455.32,"Cooper, Hickman and Pittman"
+92,Ductwork - International,Ductwork,433.24,Stewart-Robinson
+93,Contactor - Bring,Compressor,328.14,Wallace LLC
+94,Valve - But,Contactor,294.92,"Gentry, Johnson and Perez"
+95,Thermostat - More,Ductwork,76.16,Hart LLC
+96,Contactor - Direction,Contactor,320.62,Monroe PLC
+97,Contactor - Medical,Thermostat,161.2,Oneill PLC
+98,Refrigerant - Though,Capacitor,471.18,Booker-Martin
+99,Compressor - Trip,Fan Motor,264.17,Freeman-Weiss
+100,Coil - Agent,Compressor,139.45,"Patel, Colon and Hayes"
+101,Capacitor - Anyone,Ductwork,217.33,Parks LLC
+102,Contactor - Theory,Filter,477.31,"Lewis, Berger and Martin"
+103,Contactor - Responsibility,Fan Motor,149.24,Fox PLC
+104,Contactor - Fish,Refrigerant,283.98,"Bruce, Travis and Bender"
+105,Valve - Every,Refrigerant,178.37,"Gallagher, Cook and Smith"
+106,Capacitor - Common,Thermostat,361.62,Harris LLC
+107,Contactor - Western,Fan Motor,481.99,Fields Inc
+108,Compressor - Land,Capacitor,8.71,Scott-Rivas
+109,Capacitor - Its,Contactor,107.38,Glover Group
+110,Fan Motor - Material,Fan Motor,26.87,Crane LLC
+111,Thermostat - Sing,Capacitor,160.16,Holland Group
+112,Refrigerant - Detail,Ductwork,123.3,"Lam, Medina and Dean"
+113,Valve - Matter,Thermostat,394.64,Miller-Le
+114,Thermostat - However,Refrigerant,422.1,"Taylor, Greene and Bruce"
+115,Ductwork - Already,Capacitor,228.5,"Greene, Johnson and White"
+116,Fan Motor - Power,Fan Motor,383.26,"Krause, Decker and Rivera"
+117,Thermostat - Fact,Refrigerant,499.44,Zuniga Group
+118,Compressor - Mouth,Filter,457.3,"Berry, Reeves and Reed"
+119,Refrigerant - Bar,Valve,284.98,"Black, Rogers and Nash"
+120,Ductwork - Sit,Refrigerant,239.53,Adams-Scott
+121,Fan Motor - Family,Compressor,385.66,"Brewer, Barnes and Velazquez"
+122,Compressor - Radio,Fan Motor,84.64,"Hampton, Smith and Salazar"
+123,Fan Motor - Organization,Fan Motor,450.24,Ross Ltd
+124,Filter - Fall,Refrigerant,406.31,"Mason, Gonzales and Kelley"
+125,Filter - I,Coil,400.44,Wilson-Suarez
+126,Compressor - Particularly,Contactor,309.6,Nunez and Sons
+127,Fan Motor - Put,Compressor,60.97,"Dodson, Petty and Perry"
+128,Refrigerant - Recognize,Fan Motor,5.26,"Smith, Thompson and Rogers"
+129,Coil - Pick,Thermostat,490.19,Spencer PLC
+130,Filter - Democratic,Thermostat,424.71,"Phillips, Boyer and Miller"
+131,Filter - Play,Refrigerant,69.05,"Mendoza, Miller and Martinez"
+132,Capacitor - Fine,Valve,160.6,"Carter, Obrien and Blackwell"
+133,Thermostat - Scientist,Valve,152.85,Cook-Hernandez
+134,Thermostat - Miss,Contactor,283.93,Johnson-Terry
+135,Fan Motor - Minute,Ductwork,440.13,"Alexander, Mcdowell and Johnson"
+136,Valve - Everyone,Valve,189.97,Gutierrez-Kent
+137,Contactor - Enter,Filter,373.45,"Jones, Fuller and Briggs"
+138,Filter - Must,Filter,341.91,Park Ltd
+139,Filter - Born,Thermostat,325.55,Bryant and Sons
+140,Refrigerant - Crime,Capacitor,231.07,Tate Inc
+141,Compressor - Call,Coil,283.76,"Randolph, Gutierrez and White"
+142,Fan Motor - Community,Thermostat,199.64,Martinez Ltd
+143,Thermostat - Later,Refrigerant,279.54,Sparks-Lee
+144,Contactor - Physical,Capacitor,357.61,"Duran, Austin and Stokes"
+145,Refrigerant - Vote,Coil,170.23,Nash LLC
+146,Valve - Bed,Compressor,307.07,"Williams, Galvan and Lee"
+147,Compressor - Drug,Coil,339.13,Peters-Carter
+148,Filter - Term,Fan Motor,270.45,Garrett LLC
+149,Fan Motor - Arm,Ductwork,22.22,Brady PLC
+150,Compressor - Figure,Compressor,259.41,"Burke, Smith and Williams"
+151,Compressor - During,Fan Motor,67.22,Rivera-Evans
+152,Compressor - Both,Ductwork,197.79,Hart-Reyes
+153,Coil - Reach,Capacitor,45.01,Tate-Flores
+154,Ductwork - Their,Contactor,344.91,Phillips-Shaw
+155,Fan Motor - Parent,Fan Motor,257.3,Williams Ltd
+156,Compressor - Cold,Capacitor,494.47,Johnson LLC
+157,Refrigerant - Off,Fan Motor,363.95,Blanchard Inc
+158,Coil - People,Coil,492.02,Doyle-Weber
+159,Compressor - Good,Coil,364.32,"Jones, Smith and Sanchez"
+160,Filter - Single,Coil,16.81,Mills LLC
+161,Refrigerant - Increase,Filter,174.59,Jackson Inc
+162,Compressor - Too,Ductwork,318.18,"Mcconnell, Estes and Boone"
+163,Contactor - Wife,Fan Motor,496.11,"Ashley, Hudson and Rodriguez"
+164,Valve - Natural,Valve,147.68,"Bruce, Maxwell and Hoover"
+165,Fan Motor - Interest,Valve,42.38,Sloan LLC
+166,Fan Motor - The,Refrigerant,498.06,Davis LLC
+167,Coil - Music,Coil,409.33,Garcia PLC
+168,Capacitor - Heart,Fan Motor,64.07,Conway-Scott
+169,Ductwork - Stuff,Compressor,224.58,"Johnson, Rivers and Strickland"
+170,Thermostat - Oil,Refrigerant,205.07,Thomas PLC
+171,Refrigerant - Coach,Contactor,253.33,"Martinez, Thomas and Davies"
+172,Fan Motor - Discussion,Capacitor,320.18,Johnson-Barrera
+173,Valve - Plan,Filter,74.71,Rodriguez-Martinez
+174,Thermostat - Indeed,Fan Motor,452.67,Hancock-Price
+175,Ductwork - Model,Compressor,171.15,"Riley, Wilkinson and Wagner"
+176,Compressor - Stop,Ductwork,484.85,Stein-Harris
+177,Compressor - Thought,Ductwork,71.28,Willis-White
+178,Compressor - Conference,Contactor,173.42,Cole-Davis
+179,Refrigerant - Early,Valve,382.98,"Jones, Thompson and Parker"
+180,Valve - Save,Filter,166.69,Sellers-Blackburn
+181,Fan Motor - Understand,Refrigerant,124.56,Hahn Ltd
+182,Fan Motor - Bad,Coil,154.77,Waters and Sons
+183,Compressor - Author,Compressor,452.51,Chung Group
+184,Fan Motor - Start,Compressor,434.12,"Ho, Valencia and Riley"
+185,Valve - Discuss,Ductwork,460.16,Torres PLC
+186,Valve - Mouth,Fan Motor,200.73,Frazier PLC
+187,Coil - Notice,Ductwork,347.71,"Lucas, Lynch and Durham"
+188,Refrigerant - Name,Ductwork,456.02,"Graham, Miranda and Mann"
+189,Contactor - Out,Refrigerant,58.65,"Richardson, Ritter and Smith"
+190,Thermostat - Develop,Compressor,134.85,Ibarra LLC
+191,Capacitor - Benefit,Contactor,384.44,"Ayala, Rogers and Martinez"
+192,Refrigerant - Another,Thermostat,208.21,King Ltd
+193,Ductwork - Threat,Capacitor,113.94,Estrada-Preston
+194,Fan Motor - Sea,Refrigerant,208.82,Bryan Group
+195,Compressor - Board,Ductwork,211.27,"Pierce, Moore and Martinez"
+196,Coil - Try,Capacitor,277.26,Rodriguez PLC
+197,Filter - Director,Compressor,139.5,"Doyle, Taylor and Carson"
+198,Thermostat - Interesting,Capacitor,302.31,Caldwell PLC
+199,Capacitor - Behind,Filter,241.98,Carter Ltd
+200,Contactor - Include,Thermostat,123.04,Phillips Ltd

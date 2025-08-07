@@ -42,9 +42,19 @@ seeds:
       +column_types:
         technician_id: integer
         technician_name: varchar(255)
-        skill_level: varchar(20)
-        hourly_rate: decimal(10,2)
+        phone: varchar(50)
+        technician_level: varchar(20)
+        hourly_rate: integer
         hire_date: date
+        years_experience: integer
+        certification_level: varchar(50)
+        hvac_installation_skill: integer
+        electrical_skill: integer
+        refrigeration_skill: integer
+        ductwork_skill: integer
+        diagnostics_skill: integer
+        customer_service_skill: integer
+        safety_protocols_skill: integer
     equipment_types:
       +column_types:
         equipment_id: integer
@@ -78,4 +88,203 @@ seeds:
         service_call_id: integer
         part_id: integer
         quantity_used: integer
-        part_cost: decimal(10,2)
+        usage_date: date
+    installed_devices:
+      +column_types:
+        installation_id: integer
+        customer_id: integer
+        equipment_id: integer
+        installation_date: date
+        warranty_end_date: date
+        serial_number: varchar(50)
+        installation_location: varchar(100)
+        status: varchar(50)
+        last_maintenance_date: date
+    invoices:
+      +column_types:
+        invoice_id: integer
+        invoice_number: varchar(50)
+        service_call_id: integer
+        customer_id: integer
+        issue_date: date
+        due_date: date
+        payment_terms: varchar(50)
+        subtotal: decimal(10,2)
+        tax_rate: decimal(5,4)
+        tax_amount: decimal(10,2)
+        total_amount: decimal(10,2)
+        status: varchar(50)
+        notes: varchar(500)
+    payments:
+      +column_types:
+        payment_id: integer
+        invoice_id: integer
+        payment_date: date
+        amount: decimal(10,2)
+        payment_method: varchar(50)
+        transaction_id: varchar(50)
+        status: varchar(50)
+        processing_fee: decimal(10,2)
+        notes: varchar(500)
+    appointments:
+      +column_types:
+        appointment_id: integer
+        customer_id: integer
+        technician_id: integer
+        service_call_id: integer
+        appointment_date: date
+        scheduled_time: timestamp
+        appointment_type: varchar(50)
+        estimated_duration_hours: decimal(4,2)
+        status: varchar(50)
+        priority: varchar(20)
+        special_instructions: varchar(500)
+        created_date: date
+        confirmed_date: date
+    quotes:
+      +column_types:
+        quote_id: integer
+        quote_number: varchar(50)
+        customer_id: integer
+        equipment_id: integer
+        quote_date: date
+        valid_until: date
+        quote_type: varchar(50)
+        description: varchar(500)
+        labor_hours: decimal(4,2)
+        labor_rate: decimal(8,2)
+        labor_cost: decimal(10,2)
+        equipment_cost: decimal(10,2)
+        parts_cost: decimal(10,2)
+        total_amount: decimal(10,2)
+        status: varchar(50)
+        created_by: varchar(100)
+        follow_up_date: date
+        notes: varchar(500)
+    leads:
+      +column_types:
+        lead_id: integer
+        first_name: varchar(100)
+        last_name: varchar(100)
+        company_name: varchar(255)
+        phone: varchar(50)
+        email: varchar(255)
+        address: varchar(500)
+        lead_source: varchar(100)
+        service_interest: varchar(100)
+        estimated_value: decimal(10,2)
+        urgency: varchar(20)
+        status: varchar(50)
+        created_date: date
+        last_contact_date: date
+        assigned_to: varchar(100)
+        notes: varchar(500)
+        conversion_probability: integer
+    subscriptions:
+      +column_types:
+        subscription_id: integer
+        customer_id: integer
+        service_plan: varchar(50)
+        start_date: date
+        end_date: date
+        annual_cost: decimal(10,2)
+        payment_frequency: varchar(20)
+        status: varchar(50)
+        auto_renewal: boolean
+        services_included: varchar(500)
+        discount_percentage: integer
+        next_service_date: date
+    inventory:
+      +column_types:
+        inventory_id: integer
+        part_id: integer
+        warehouse_location: varchar(50)
+        current_stock: integer
+        reorder_point: integer
+        max_stock_level: integer
+        last_restock_date: date
+        last_restock_quantity: integer
+        avg_monthly_usage: integer
+        stock_status: varchar(50)
+        supplier_lead_time_days: integer
+        abc_classification: varchar(5)
+        last_count_date: date
+        unit_cost: decimal(10,2)
+        total_value: decimal(10,2)
+    work_orders:
+      +column_types:
+        work_order_id: integer
+        service_call_id: integer
+        technician_id: integer
+        work_order_number: varchar(50)
+        description: varchar(500)
+        instructions: varchar(500)
+        safety_requirements: varchar(200)
+        estimated_hours: decimal(4,2)
+        actual_hours: decimal(4,2)
+        status: varchar(50)
+        priority: varchar(20)
+        completion_notes: varchar(500)
+        customer_signature_required: boolean
+    customer_feedback:
+      +column_types:
+        feedback_id: integer
+        service_call_id: integer
+        customer_id: integer
+        feedback_date: date
+        feedback_type: varchar(50)
+        overall_satisfaction: integer
+        technician_rating: integer
+        timeliness_rating: integer
+        quality_rating: integer
+        value_rating: integer
+        comments: varchar(500)
+        would_recommend: boolean
+        follow_up_required: boolean
+        source: varchar(50)
+    incident_response:
+      +column_types:
+        incident_id: integer
+        service_call_id: integer
+        incident_type: varchar(100)
+        severity_level: varchar(20)
+        reported_time: timestamp
+        response_time_minutes: integer
+        resolution_time_minutes: integer
+        responding_technician_id: integer
+        backup_technician_id: integer
+        resolution_status: varchar(50)
+        customer_satisfaction: integer
+        follow_up_required: boolean
+    vehicle_fleet:
+      +column_types:
+        vehicle_id: integer
+        vehicle_number: varchar(50)
+        make: varchar(50)
+        model: varchar(50)
+        year: integer
+        vehicle_type: varchar(50)
+        license_plate: varchar(20)
+        vin: varchar(50)
+        assigned_technician_id: integer
+        purchase_date: date
+        current_mileage: integer
+        last_maintenance_date: date
+        next_maintenance_mileage: integer
+        status: varchar(50)
+        fuel_type: varchar(20)
+        gps_enabled: boolean
+    mailing_list:
+      +column_types:
+        contact_id: integer
+        customer_id: integer
+        email: varchar(255)
+        first_name: varchar(100)
+        last_name: varchar(100)
+        phone: varchar(50)
+        address: varchar(500)
+        contact_source: varchar(100)
+        subscription_status: varchar(50)
+        subscription_date: date
+        preferred_contact_method: varchar(20)
+        interests: varchar(200)

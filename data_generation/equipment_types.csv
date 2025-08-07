@@ -1,51 +1,51 @@
 equipment_id,brand,model,equipment_type,btu_rating,energy_rating
-1,Rheem,Pro183,Central AC,60000,17.4
-2,York,Elite865,Ductless Mini-Split,18000,13.2
-3,Rheem,X181,Heat Pump,48000,18.4
-4,Daikin,Pro150,Heat Pump,18000,14.9
-5,Daikin,X586,Ductless Mini-Split,18000,14.4
-6,Carrier,Elite138,Ductless Mini-Split,36000,15.5
-7,Trane,X287,Heat Pump,24000,13.3
-8,Goodman,Pro150,Furnace,48000,13.1
-9,Carrier,Elite534,Furnace,24000,14.2
-10,Rheem,X992,Package Unit,18000,15.8
-11,Trane,Prime316,Ductless Mini-Split,24000,17.5
-12,Goodman,X990,Package Unit,18000,13.5
-13,York,Elite204,Ductless Mini-Split,48000,17.4
-14,Lennox,Elite672,Ductless Mini-Split,24000,16.6
-15,Carrier,Prime609,Central AC,48000,16.6
-16,Goodman,Elite682,Central AC,24000,15.7
-17,Daikin,X218,Package Unit,24000,18.1
-18,York,Pro736,Package Unit,24000,13.1
-19,Goodman,Prime206,Heat Pump,36000,14.5
-20,York,Pro420,Heat Pump,24000,19.2
-21,Lennox,X296,Heat Pump,36000,19.8
-22,Lennox,X495,Furnace,60000,18.4
-23,Rheem,Pro625,Ductless Mini-Split,60000,15.2
-24,Rheem,X623,Ductless Mini-Split,18000,17.5
-25,Daikin,Prime969,Package Unit,60000,16.5
-26,Lennox,Pro466,Central AC,24000,18.8
-27,Trane,Pro195,Central AC,18000,15.6
-28,Goodman,Pro924,Central AC,18000,18.4
-29,Lennox,Elite373,Package Unit,60000,16.3
-30,York,X843,Central AC,60000,17.8
-31,Rheem,Pro441,Ductless Mini-Split,60000,17.3
-32,Rheem,Elite464,Package Unit,24000,19.9
-33,Daikin,Pro265,Central AC,48000,13.6
-34,Trane,Elite544,Ductless Mini-Split,36000,13.5
-35,Lennox,Pro435,Furnace,36000,19.1
-36,Lennox,Pro462,Central AC,18000,13.1
-37,Trane,Prime984,Heat Pump,36000,19.4
-38,Goodman,Pro460,Heat Pump,48000,15.1
-39,Carrier,Pro810,Central AC,60000,18.8
-40,Daikin,Pro854,Package Unit,18000,17.9
-41,Rheem,X294,Furnace,48000,17.1
-42,Carrier,Prime731,Heat Pump,18000,14.9
-43,York,Pro711,Central AC,18000,18.7
-44,Trane,X146,Furnace,60000,17.0
-45,Trane,Pro952,Package Unit,60000,17.7
-46,Trane,Pro890,Furnace,60000,18.2
-47,Goodman,Pro893,Heat Pump,18000,13.1
-48,Trane,Prime814,Central AC,36000,13.4
-49,Trane,X362,Central AC,24000,13.9
-50,Carrier,Prime653,Central AC,48000,16.0
+1,Daikin,X908,Ductless Mini-Split,24000,16.8
+2,Trane,Prime730,Heat Pump,60000,17.7
+3,Carrier,Elite958,Ductless Mini-Split,36000,17.1
+4,Carrier,Elite486,Ductless Mini-Split,48000,18.5
+5,Trane,X459,Furnace,36000,16.9
+6,Trane,Pro652,Package Unit,24000,15.2
+7,Daikin,X929,Furnace,60000,16.2
+8,York,Elite443,Heat Pump,18000,19.6
+9,Carrier,Pro460,Package Unit,60000,16.8
+10,Rheem,X656,Heat Pump,24000,19.4
+11,Rheem,Elite342,Package Unit,48000,18.3
+12,Goodman,Elite821,Heat Pump,24000,15.0
+13,Goodman,Pro193,Package Unit,48000,20.0
+14,Trane,X937,Heat Pump,36000,17.6
+15,Daikin,X613,Central AC,36000,14.7
+16,Goodman,Elite568,Ductless Mini-Split,24000,14.6
+17,Trane,Prime444,Ductless Mini-Split,48000,17.5
+18,Goodman,Prime266,Furnace,36000,16.6
+19,Trane,Pro977,Central AC,48000,18.0
+20,Daikin,Pro181,Heat Pump,48000,16.6
+21,Goodman,X540,Furnace,48000,17.3
+22,Rheem,Pro750,Package Unit,24000,16.5
+23,Trane,Prime456,Ductless Mini-Split,18000,16.2
+24,York,Elite584,Furnace,24000,15.7
+25,Daikin,Elite266,Furnace,48000,17.1
+26,York,Elite892,Furnace,48000,19.8
+27,Daikin,Elite382,Package Unit,48000,19.3
+28,Rheem,X541,Package Unit,36000,13.6
+29,Rheem,X629,Heat Pump,36000,19.7
+30,York,Pro550,Central AC,48000,16.6
+31,Trane,Elite415,Central AC,48000,19.7
+32,Daikin,Prime560,Central AC,36000,19.9
+33,Lennox,Elite150,Central AC,24000,17.6
+34,Rheem,X708,Furnace,48000,19.3
+35,Rheem,X868,Heat Pump,60000,13.6
+36,York,Prime690,Ductless Mini-Split,36000,13.1
+37,Rheem,Elite764,Furnace,18000,17.1
+38,Daikin,Prime127,Ductless Mini-Split,18000,17.8
+39,Rheem,Prime469,Package Unit,24000,17.4
+40,Daikin,Prime460,Heat Pump,36000,13.3
+41,Rheem,Elite433,Furnace,60000,19.8
+42,Trane,Elite303,Heat Pump,24000,16.9
+43,Daikin,X898,Central AC,36000,16.0
+44,Daikin,Elite838,Heat Pump,18000,13.9
+45,Daikin,Elite860,Ductless Mini-Split,60000,18.8
+46,Daikin,Prime684,Central AC,36000,17.7
+47,York,Pro842,Package Unit,18000,17.5
+48,Carrier,Elite318,Heat Pump,36000,16.6
+49,Lennox,Pro940,Central AC,18000,14.0
+50,York,Elite606,Heat Pump,48000,15.7
