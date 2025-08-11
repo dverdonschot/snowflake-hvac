@@ -1,0 +1,191 @@
+version: 2
+
+models:
+  - name: customer_segments
+    description: >
+      Customer segmentation using ML clustering and business rules to identify
+      high-value customers, at-risk accounts, and growth opportunities.
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer
+        tests:
+          - not_null
+          - unique
+      
+      - name: segment_name
+        description: Primary customer segment classification
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Champions', 'Loyal Customers', 'New Customers', 'At Risk', 'Lost Customers', 'Potential Loyalists', 'Unclassified']
+      
+      - name: marketing_persona
+        description: Marketing-focused customer persona
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['VIP Premium', 'Proactive Maintainer', 'High Maintenance', 'New Customer - First Time', 'Win Back Candidate', 'Key Account', 'Standard Customer']
+      
+      - name: risk_category
+        description: Customer risk assessment
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['High Churn Risk', 'Medium Churn Risk', 'Payment Risk', 'Reputation Risk', 'Low Risk']
+      
+      - name: value_tier
+        description: Customer value tier based on lifetime value
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Platinum', 'Gold', 'Silver', 'Bronze', 'Basic']
+      
+      - name: business_cluster
+        description: ML-based cluster assignment
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 6
+      
+      - name: lifetime_value
+        description: Customer lifetime value
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1000000
+      
+      - name: normalized_frequency
+        description: Normalized frequency score (0-1)
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: normalized_monetary
+        description: Normalized monetary score (0-1)
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: normalized_recency
+        description: Normalized recency score (0-1)
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: is_anomaly
+        description: Flag indicating if customer is a statistical anomaly
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      
+      - name: segmentation_date
+        description: Timestamp when segmentation was performed
+        tests:
+          - not_null
+
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "lifetime_value >= 0"
+          config:
+            severity: error
+      
+      - dbt_utils.expression_is_true:
+          expression: "total_service_calls >= 0"
+          config:
+            severity: error
+
+  - name: customer_segment_analysis
+    description: >
+      Comprehensive analysis of customer segments with KPIs, performance metrics,
+      and actionable recommendations for marketing and operations.
+    columns:
+      - name: segment_name
+        description: Customer segment name
+        tests:
+          - not_null
+      
+      - name: customer_count
+        description: Number of customers in this segment
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 10000
+      
+      - name: segment_percentage
+        description: Percentage of total customer base this segment represents
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 100.0
+      
+      - name: avg_lifetime_value
+        description: Average lifetime value for customers in this segment
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1000000
+      
+      - name: segment_health_score
+        description: Overall health score for the segment (0-100)
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 100
+              inclusive: true
+      
+      - name: avg_satisfaction
+        description: Average satisfaction rating for the segment
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1.0
+              max_value: 10.0
+              inclusive: true
+      
+      - name: segment_health_status
+        description: Categorical health status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Excellent', 'Good', 'Needs Attention', 'Critical']
+      
+      - name: primary_recommendation
+        description: Primary actionable recommendation for this segment
+        tests:
+          - not_null
+      
+      - name: marketing_strategy
+        description: Recommended marketing approach for this segment
+        tests:
+          - not_null
+      
+      - name: analysis_date
+        description: Timestamp when analysis was performed
+        tests:
+          - not_null
+
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "customer_count > 0"
+          config:
+            severity: warn
+      
+      - dbt_utils.expression_is_true:
+          expression: "avg_lifetime_value >= 0"
+          config:
+            severity: error

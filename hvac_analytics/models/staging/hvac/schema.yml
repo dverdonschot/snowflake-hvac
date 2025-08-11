@@ -1,0 +1,88 @@
+version: 2
+
+models:
+  - name: stg_hvac__customer_features
+    description: >
+      Comprehensive customer features for ML segmentation including RFM analysis,
+      service patterns, payment behavior, and satisfaction metrics.
+    columns:
+      - name: customer_id
+        description: Unique identifier for each customer
+        tests:
+          - not_null
+          - unique
+      
+      - name: customer_name
+        description: Customer name
+        tests:
+          - not_null
+      
+      - name: customer_type
+        description: Type of customer (residential or commercial)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['residential', 'commercial']
+      
+      - name: days_since_last_service
+        description: Number of days since the customer's last service call
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 10000
+      
+      - name: total_service_calls
+        description: Total number of service calls for this customer
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1000
+      
+      - name: lifetime_value
+        description: Total monetary value from this customer
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1000000
+      
+      - name: avg_satisfaction
+        description: Average customer satisfaction rating
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 1.0
+              max_value: 10.0
+              inclusive: true
+      
+      - name: emergency_ratio
+        description: Percentage of services that were emergency calls
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: maintenance_ratio
+        description: Percentage of services that were maintenance calls
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: late_payment_ratio
+        description: Percentage of payments that were late
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0.0
+              max_value: 1.0
+              inclusive: true
+      
+      - name: preliminary_segment
+        description: Initial business rule-based segment assignment
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['New Customer', 'Inactive', 'VIP', 'High Maintenance', 'Proactive', 'Standard']
